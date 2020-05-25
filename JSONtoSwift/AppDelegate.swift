@@ -14,7 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+
+    URLSessionExample().getPosts {
+      print($0)
+    }
+
+    AlamofireExample().getPosts {
+      print($0)
+    }
+
     return true
   }
 
